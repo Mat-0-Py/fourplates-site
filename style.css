@@ -1,0 +1,176 @@
+:root {
+  color-scheme: light dark;
+  --canvas: #F5F3EE;
+  --card: #FFFFFF;
+  --ink: #121214;
+  --inkSecondary: #6B6A70;
+  --hairline: #E7E4DD;
+  --legs: #F0384B;
+  --back: #2C6BF2;
+  --chest: #F5B700;
+  --shoulders: #1FB25A;
+  --arms: #8A4DF0;
+  --core: #FF7A1A;
+  --other: #8E8C93;
+  --body-font: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #0B0B0D;
+    --card: #18181B;
+    --ink: #F5F3EE;
+    --inkSecondary: #9B9AA1;
+    --hairline: #2A2A2F;
+    --legs: #FF4D5E;
+    --back: #4C86FF;
+    --chest: #FFC933;
+    --shoulders: #34D17A;
+    --arms: #A274FF;
+    --core: #FF9142;
+    --other: #77767C;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1.5rem; background: var(--canvas); }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--body-font); font-size: 1rem; line-height: 1.6; text-size-adjust: 100%; }
+a { color: var(--ink); text-underline-offset: 0.22em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; border-radius: 2px; }
+p { margin: 0 0 1rem; }
+h1, h2, h3 { line-height: 1.1; letter-spacing: -0.04em; text-wrap: balance; }
+h1 { margin: 0 0 1.5rem; font-size: clamp(3rem, 7.5vw, 6.1rem); font-weight: 760; }
+h2 { margin: 0 0 1.25rem; font-size: clamp(2rem, 3.8vw, 3rem); font-weight: 720; }
+h3 { font-size: 1.15rem; letter-spacing: -0.02em; }
+.shell { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+.skip-link { position: absolute; top: 0.75rem; left: 1rem; padding: 0.6rem 1rem; z-index: 10; background: var(--ink); color: var(--canvas); opacity: 0; pointer-events: none; }
+.skip-link:focus { opacity: 1; pointer-events: auto; }
+.site-header > .shell { min-height: 110px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--hairline); }
+.brand { display: inline-flex; align-items: center; gap: 12px; font-size: 1.65rem; font-weight: 750; letter-spacing: -0.04em; text-decoration: none; }
+.brand-mark { display: block; width: 47px; height: 31px; }
+.site-nav, .site-footer nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+.site-nav a { padding-block: 10px; font-size: 0.9rem; text-decoration: none; }
+.site-nav a[aria-current="page"] { text-decoration: underline; font-weight: 650; }
+.hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; padding-block: 88px 100px; }
+.eyebrow { margin-bottom: 1.25rem; color: var(--inkSecondary); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.13em; text-transform: uppercase; }
+.lede { font-size: 1.125rem; line-height: 1.65; color: var(--inkSecondary); }
+.hero-copy .lede { max-width: 440px; }
+.small { margin-top: 0.7rem; color: var(--inkSecondary); font-size: 0.8rem; }
+.store-badge-placeholder { display: inline-flex; flex-direction: column; padding: 10px 24px 12px; margin-top: 1.25rem; color: var(--canvas); background: var(--ink); border-radius: 12px; line-height: 1.1; }
+.store-badge-placeholder span { font-size: 0.75rem; margin-bottom: 3px; }
+.store-badge-placeholder strong { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; }
+.week-preview { margin: 0; padding: 32px; background: var(--card); border-radius: 28px; }
+.week-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.week-heading .eyebrow { margin: 0; }
+.week-total { white-space: nowrap; font-size: 0.9rem; color: var(--inkSecondary); }
+.week-total strong { font-size: 2.75rem; color: var(--ink); font-weight: 760; margin-right: 3px; line-height: 1; }
+.week-bar { display: block; width: 100%; height: auto; margin-block: 36px 24px; }
+.week-bar rect { stroke: var(--inkSecondary); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.sleeve { fill: var(--ink); }
+.empty-plate { fill: var(--hairline); }
+.legs { fill: var(--legs); background: var(--legs); }
+.back { fill: var(--back); background: var(--back); }
+.chest { fill: var(--chest); background: var(--chest); }
+.shoulders { fill: var(--shoulders); background: var(--shoulders); }
+.day-label { fill: var(--inkSecondary); font-size: 17px; font-family: var(--body-font); }
+.muscle-key { list-style: none; padding: 0; margin: 0 0 18px; display: flex; gap: 10px 16px; flex-wrap: wrap; font-size: 0.75rem; }
+.muscle-key li { display: flex; gap: 6px; align-items: center; }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: 0 0 auto; }
+figcaption { font-size: 0.82rem; line-height: 1.55; color: var(--inkSecondary); }
+.feature-section { padding-block: 70px 90px; border-top: 1px solid var(--hairline); }
+.section-intro { max-width: 620px; margin-bottom: 36px; }
+.section-intro > p:last-child, .switch-section > p:not(.eyebrow) { color: var(--inkSecondary); max-width: 600px; }
+.comparison { border-collapse: collapse; table-layout: fixed; width: 100%; font-size: 0.95rem; }
+.comparison caption { color: var(--inkSecondary); font-size: 0.8rem; text-align: left; margin-bottom: 12px; }
+.comparison .feature-column { width: 46%; }
+.comparison th, .comparison td { padding: 19px 20px; border-bottom: 1px solid var(--hairline); text-align: left; vertical-align: top; overflow-wrap: break-word; }
+.comparison thead { background: var(--card); }
+.comparison thead th { font-size: 0.85rem; }
+.comparison tbody th { font-weight: 500; }
+.comparison td { color: var(--inkSecondary); }
+.pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 44px; }
+.pricing > div { border-top: 2px solid var(--ink); padding-top: 8px; }
+.pricing h3 { margin-block: 16px; }
+.price { font-size: 2rem; font-weight: 730; letter-spacing: -0.04em; line-height: 1.25; }
+.price span { font-size: 0.85rem; letter-spacing: 0; font-weight: 400; color: var(--inkSecondary); }
+.pricing > div > p:last-child { color: var(--inkSecondary); font-size: 0.9rem; }
+.pricing-note { color: var(--inkSecondary); font-size: 0.82rem; margin-top: 20px; max-width: 740px; }
+.switch-section { padding-block: 80px 100px; border-top: 1px solid var(--hairline); }
+.switch-section h2 { max-width: 800px; }
+.text-link { display: inline-block; font-size: 0.95rem; margin-top: 8px; }
+.text-link span { padding-left: 8px; }
+.document { max-width: 760px; padding-block: 72px 90px; }
+.document h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); }
+.document .lede { margin-bottom: 48px; }
+.document section { margin-block: 42px; }
+.document h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); letter-spacing: -0.025em; margin-bottom: 18px; }
+.document h3 { font-size: 1.1rem; }
+.document li { margin-bottom: 10px; }
+.document ul, .document ol { padding-left: 1.4rem; }
+.notice { padding: 28px; border: 1px solid var(--inkSecondary); border-radius: 20px; background: var(--card); }
+.notice p:last-child { margin-bottom: 0; }
+.placeholder { padding: 16px 20px; border: 1px dashed var(--inkSecondary); border-radius: 12px; color: var(--inkSecondary); overflow-wrap: anywhere; }
+.site-footer { border-top: 1px solid var(--hairline); }
+.site-footer > .shell { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding-block: 32px; font-size: 0.8rem; }
+.site-footer p { margin: 0; color: var(--inkSecondary); }
+.site-footer a { padding-block: 8px; }
+
+@media (max-width: 850px) {
+  .hero { gap: 32px; padding-block: 60px 70px; }
+  .week-preview { padding: 24px; }
+  .week-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .week-total { margin: 0; }
+  .pricing { gap: 20px; }
+  .price { font-size: 1.7rem; }
+}
+
+@media (max-width: 620px) {
+  .shell { width: calc(100% - 40px); }
+  .site-header > .shell { align-items: flex-start; justify-content: center; flex-direction: column; gap: 8px; padding-block: 22px 12px; }
+  .site-nav { gap: 22px; width: 100%; justify-content: space-between; }
+  .site-nav a { font-size: 0.8rem; }
+  .hero { grid-template-columns: 1fr; gap: 36px; padding-block: 44px 60px; }
+  h1 { font-size: clamp(3rem, 11.8vw, 4.4rem); }
+  .hero-copy .lede { max-width: none; }
+  .lede { font-size: 1rem; }
+  .week-heading { flex-direction: row; align-items: baseline; }
+  .week-heading .eyebrow { white-space: nowrap; }
+  .week-total { font-size: 0.8rem; }
+  .week-total strong { font-size: 2.2rem; }
+  .week-preview { padding: 22px; border-radius: 22px; }
+  .week-bar { margin-block: 28px 20px; }
+  .day-label { font-size: 24px; }
+  .feature-section, .switch-section { padding-block: 48px 56px; }
+  .comparison { font-size: 0.78rem; }
+  .comparison .feature-column { width: 40%; }
+  .comparison th, .comparison td { padding: 14px 8px; }
+  .comparison th:first-child { padding-left: 0; }
+  .comparison thead th { font-size: 0.72rem; }
+  .comparison tbody th { font-weight: 550; }
+  .pricing { grid-template-columns: 1fr; gap: 16px; padding-top: 30px; }
+  .pricing h3 { margin-block: 12px; }
+  .price { font-size: 2rem; }
+  .document { padding-block: 44px 56px; }
+  .document .lede { margin-bottom: 32px; }
+  .notice { padding: 22px; }
+  .site-footer > .shell { align-items: flex-start; flex-direction: column; gap: 14px; padding-block: 26px; }
+  .site-footer nav { gap: 22px; }
+}
+
+/* Product copy sections share the site’s type, ink and card colours. */
+.logging-section, .questions-section { padding-block: 70px 90px; border-top: 1px solid var(--hairline); }
+.feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.feature-grid article { padding: 24px; background: var(--card); border-radius: 22px; }
+.feature-grid h3, .questions h3 { margin: 0 0 12px; line-height: 1.3; }
+.feature-grid p, .questions p { color: var(--inkSecondary); margin: 0; }
+.questions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+@media (max-width: 850px) {
+  .feature-grid, .questions { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 620px) {
+  .logging-section, .questions-section { padding-block: 48px 56px; }
+  .feature-grid article { padding: 22px; }
+}
+
+.how-section > .text-link { margin-top: 24px; }
