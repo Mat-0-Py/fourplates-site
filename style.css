@@ -12,7 +12,9 @@
   --arms: #8A4DF0;
   --core: #FF7A1A;
   --other: #8E8C93;
-  --body-font: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", system-ui, sans-serif;
+  --body-font: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  /* Big numbers are rounded, as in the app (docs/brand.md § Type). */
+  --number-font: ui-rounded, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,7 +53,10 @@ h3 { font-size: 1.15rem; letter-spacing: -0.02em; }
 .brand-mark { display: block; width: 47px; height: 31px; }
 .site-nav, .site-footer nav { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
 .site-nav a { padding-block: 10px; font-size: 0.9rem; text-decoration: none; }
-.site-nav a[aria-current="page"] { text-decoration: underline; font-weight: 650; }
+.site-nav a:hover { text-decoration: underline; text-decoration-thickness: 1px; }
+.site-nav a[aria-current="page"] { text-decoration: underline; text-decoration-thickness: 2px; font-weight: 650; }
+/* Apple asks for iPhone never to be set in capitals, so uppercase labels leave it alone. */
+.product-name { text-transform: none; }
 .hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 70px; padding-block: 88px 100px; }
 .eyebrow { margin-bottom: 1.25rem; color: var(--inkSecondary); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.13em; text-transform: uppercase; }
 .lede { font-size: 1.125rem; line-height: 1.65; color: var(--inkSecondary); }
@@ -64,7 +69,7 @@ h3 { font-size: 1.15rem; letter-spacing: -0.02em; }
 .week-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .week-heading .eyebrow { margin: 0; }
 .week-total { white-space: nowrap; font-size: 0.9rem; color: var(--inkSecondary); }
-.week-total strong { font-size: 2.75rem; color: var(--ink); font-weight: 760; margin-right: 3px; line-height: 1; }
+.week-total strong { font-family: var(--number-font); font-size: 2.75rem; color: var(--ink); font-weight: 800; margin-right: 3px; line-height: 1; }
 .week-bar { display: block; width: 100%; height: auto; margin-block: 36px 24px; }
 .week-bar rect { stroke: var(--inkSecondary); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
 .sleeve { fill: var(--ink); }
@@ -92,8 +97,8 @@ figcaption { font-size: 0.82rem; line-height: 1.55; color: var(--inkSecondary); 
 .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 44px; }
 .pricing > div { border-top: 2px solid var(--ink); padding-top: 8px; }
 .pricing h3 { margin-block: 16px; }
-.price { font-size: 2rem; font-weight: 730; letter-spacing: -0.04em; line-height: 1.25; }
-.price span { font-size: 0.85rem; letter-spacing: 0; font-weight: 400; color: var(--inkSecondary); }
+.price { font-family: var(--number-font); font-size: 2rem; font-weight: 750; letter-spacing: -0.03em; line-height: 1.25; }
+.price span { font-family: var(--body-font); font-size: 0.85rem; letter-spacing: 0; font-weight: 400; color: var(--inkSecondary); }
 .pricing > div > p:last-child { color: var(--inkSecondary); font-size: 0.9rem; }
 .pricing-note { color: var(--inkSecondary); font-size: 0.82rem; margin-top: 20px; max-width: 740px; }
 .switch-section { padding-block: 80px 100px; border-top: 1px solid var(--hairline); }
@@ -108,13 +113,25 @@ figcaption { font-size: 0.82rem; line-height: 1.55; color: var(--inkSecondary); 
 .document h3 { font-size: 1.1rem; }
 .document li { margin-bottom: 10px; }
 .document ul, .document ol { padding-left: 1.4rem; }
+.contents { margin-block: 8px 56px; padding: 24px 28px; background: var(--card); border-radius: 22px; }
+.contents .eyebrow { margin-bottom: 12px; }
+.document .contents ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 32px; }
+.document .contents li { margin: 0; break-inside: avoid; }
+.contents a { display: block; padding-block: 5px; font-size: 0.92rem; line-height: 1.4; text-decoration: none; }
+.contents a:hover { text-decoration: underline; }
 .notice { padding: 28px; border: 1px solid var(--inkSecondary); border-radius: 20px; background: var(--card); }
 .notice p:last-child { margin-bottom: 0; }
 .placeholder { padding: 16px 20px; border: 1px dashed var(--inkSecondary); border-radius: 12px; color: var(--inkSecondary); overflow-wrap: anywhere; }
 .site-footer { border-top: 1px solid var(--hairline); }
-.site-footer > .shell { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding-block: 32px; font-size: 0.8rem; }
+.site-footer > .shell { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: 28px 40px; padding-block: 44px 40px; font-size: 0.85rem; }
 .site-footer p { margin: 0; color: var(--inkSecondary); }
-.site-footer a { padding-block: 8px; }
+.footer-brand { display: flex; flex-direction: column; gap: 6px; }
+.footer-brand .brand { gap: 10px; font-size: 1.15rem; }
+.footer-brand .brand-mark { width: 33px; height: 22px; }
+.site-footer nav { justify-content: flex-end; gap: 6px 26px; }
+.site-footer nav a { padding-block: 8px; text-decoration: none; }
+.site-footer nav a:hover, .site-footer nav a[aria-current="page"] { text-decoration: underline; }
+.site-footer .credits { grid-column: 1 / -1; padding-top: 22px; border-top: 1px solid var(--hairline); font-size: 0.72rem; line-height: 1.5; }
 
 @media (max-width: 850px) {
   .hero { gap: 32px; padding-block: 60px 70px; }
@@ -154,8 +171,11 @@ figcaption { font-size: 0.82rem; line-height: 1.55; color: var(--inkSecondary); 
   .document { padding-block: 44px 56px; }
   .document .lede { margin-bottom: 32px; }
   .notice { padding: 22px; }
-  .site-footer > .shell { align-items: flex-start; flex-direction: column; gap: 14px; padding-block: 26px; }
-  .site-footer nav { gap: 22px; }
+  .contents { padding: 20px 22px; margin-bottom: 40px; }
+  .document .contents ol { columns: 1; }
+  .site-footer > .shell { grid-template-columns: 1fr; gap: 18px; padding-block: 32px 28px; }
+  .site-footer nav { justify-content: flex-start; gap: 0 22px; }
+  .site-footer .credits { padding-top: 18px; }
 }
 
 /* Product copy sections share the site’s type, ink and card colours. */

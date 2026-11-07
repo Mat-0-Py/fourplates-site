@@ -21,6 +21,10 @@ removed once this site is live.
 Also `routine-template.csv` and `history-example.csv` (both linked from Support), `404.html`,
 `favicon.svg`, `robots.txt`, `sitemap.xml` and `CNAME` (the custom domain for GitHub Pages).
 
+`apple-touch-icon.png` and `social-card.png` (the picture shown when a link is shared) are drawn
+by `swift tools/render-images.swift` from the mark's proportions; run it again if the mark
+changes, then commit the PNGs. Nothing runs when the site is published.
+
 `history-example.csv` is a made-up two-session history in the layout the app imports. Nothing
 tests it automatically: if the app's import rules change, import it into the app again to check.
 
