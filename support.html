@@ -36,19 +36,36 @@
       <p>Export your history from the other app as a CSV file. In Four Plates, open Settings and tap Import Workout History. Choose Kilograms or Pounds to match that export, then choose your file.</p>
       <p>Four Plates tells you how many sessions and sets it imported, and whether it skipped entries already here. Importing your history is free.</p>
       <p><a href="how-it-works.html#importing-and-exporting">How Four Plates reads and exports your history</a>.</p>
+      <h3 id="history-format">Getting your history into the right format</h3>
+      <p>If your old app’s file has different columns, or you’ve kept your training in a spreadsheet, <a href="history-example.csv" download>download the example history file</a> and arrange your data the same way. It holds two made-up sessions, Push and Pull. Open it in any spreadsheet app, replace its rows with your own, and save it as CSV. Don’t import the example as it is, or its two sessions will be added to your history.</p>
+      <p>Use one row for each set. Only <code>Date</code> and <code>Exercise Name</code> are required.</p>
+      <ul>
+        <li><code>Date</code>: when the session started, such as 2026-10-05 18:30:00, or just 2026-10-05. Give every row of a session the same date and time. Write the year first: dates with slashes, such as 05/10/2026, are read in the order your iPhone’s region uses.</li>
+        <li><code>Workout Name</code>: the session’s name, such as Push. Rows with the same date and name make one session. If it’s blank, the session is called Workout.</li>
+        <li><code>Duration</code>: how long the session took, such as 1h 5m, 52m or 01:05:00.</li>
+        <li><code>Exercise Name</code>: such as Bench Press (Barbell) or Pull Up. Four Plates recognises common exercise names; any it doesn’t are added as custom exercises.</li>
+        <li><code>Set Order</code>: 1, 2, 3 and so on for working sets. Write W for a warm-up, D for a drop set or F for a set to failure.</li>
+        <li><code>Weight</code>: in the unit you choose when importing. Leave it blank for bodyweight exercises.</li>
+        <li><code>Reps</code>: the reps in that set.</li>
+      </ul>
+      <p>Columns can be in any order, and Four Plates ignores columns it doesn’t use. A Four Plates export has a few more, such as <code>Superset</code> and <code>Effort</code>, and import reads those too. If a row can’t be read, Four Plates skips it and tells you why.</p>
     </section>
 
     <section aria-labelledby="routines">
       <h2 id="routines">Can I import routines from a CSV file?</h2>
-      <p>Yes. One file can hold several routines. Open New Routine and choose Import from File. Choose kg or lb to match the weights in your file, then tap Choose CSV File.</p>
-      <p>Use one row per exercise. The required columns are <code>Routine</code>, <code>Exercise</code>, <code>Sets</code> and <code>Reps</code>. The optional columns are <code>Weight</code> and <code>Superset</code>.</p>
+      <p>Yes. A routine file is a plan to follow, not a log of what you did: one row for each exercise, with the sets and reps you’re aiming for. One file can hold several routines, so a whole plan from a trainer or a spreadsheet comes in at once.</p>
+      <p>Open New Routine and choose Import from File. Choose kg or lb to match the weights in your file, then tap Choose CSV File. Four Plates shows a preview of every routine before you tap Import. Nothing is saved until then, and your existing routines stay as they are.</p>
+      <h3 id="routine-format">Getting your routines into the right format</h3>
+      <p>Start from the template: use Get the Template in the app, or <a href="routine-template.csv" download>download the routine CSV template</a>. It has Push and Pull routines. Open it in any spreadsheet app, replace the exercises and targets with your own, and save it as CSV.</p>
       <ul>
-        <li>Sets is a whole number from 1 to 20.</li>
-        <li>Reps is a whole number from 1 to 999, or a range such as 8–12. Four Plates uses the first number in a range and says so in the preview.</li>
-        <li>Weight is a target in the unit you chose. Leave it blank if you don’t want a target.</li>
-        <li>Give neighbouring exercises in the same routine the same Superset label to group them.</li>
+        <li><code>Routine</code> (required): the routine’s name, such as Push. Keep each routine’s rows together, in the order you want to do the exercises. You only need to write the name once: a blank cell carries on the routine above.</li>
+        <li><code>Exercise</code> (required): such as Bench Press (Barbell). Four Plates recognises common exercise names; any it doesn’t are added as custom exercises, and the preview shows which.</li>
+        <li><code>Sets</code> (required): how many sets, a whole number from 1 to 20.</li>
+        <li><code>Reps</code> (required): the reps for each set, a whole number from 1 to 999, or a range such as 8–12. Four Plates uses the first number in a range and says so in the preview.</li>
+        <li><code>Weight</code> (optional): a target weight in the unit you chose. Leave it blank to choose the weight on the day.</li>
+        <li><code>Superset</code> (optional): a label such as A. Exercises next to each other in the same routine with the same label become a superset: a set of each in turn, then rest after the round.</li>
       </ul>
-      <p>Use Get the Template in the app, or <a href="routine-template.csv" download>download the routine CSV template</a>. It has Push and Pull routines to fill in. Four Plates shows a preview before you tap Import; existing routines stay as they are.</p>
+      <p>Columns can be in any order, capital letters don’t matter, and other columns are ignored. If a routine with the same name already exists, the new one is called Push 2, for example, so nothing is replaced. If a row can’t be read, it’s skipped and the preview says why.</p>
       <p>Four Plates doesn't check imported plans. You choose every weight.</p>
     </section>
 

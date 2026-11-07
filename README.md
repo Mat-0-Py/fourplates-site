@@ -18,8 +18,11 @@ removed once this site is live.
 | Terms of use | <https://fourplates.app/terms.html> |
 | Support | <https://fourplates.app/support.html> |
 
-Also `routine-template.csv` (linked from Support), `404.html`, `favicon.svg`, `robots.txt`,
-`sitemap.xml` and `CNAME` (the custom domain for GitHub Pages).
+Also `routine-template.csv` and `history-example.csv` (both linked from Support), `404.html`,
+`favicon.svg`, `robots.txt`, `sitemap.xml` and `CNAME` (the custom domain for GitHub Pages).
+
+`history-example.csv` is a made-up two-session history in the layout the app imports. Nothing
+tests it automatically: if the app's import rules change, import it into the app again to check.
 
 ## Preview
 
