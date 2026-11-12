@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0B0B0D" media="(prefers-color-scheme: dark)">
   <title>Support · Four Plates</title>
-  <meta name="description" content="Help with Four Plates routines from CSV, the Apple Watch app, backup and restore, sharing sessions, editing history and iCloud sync.">
+  <meta name="description" content="Help with Four Plates routines from CSV, the Apple Watch app, Apple Health, backup and restore, sharing sessions, editing history and iCloud sync.">
   <link rel="canonical" href="https://fourplates.app/support.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -16,7 +16,7 @@
   <meta property="og:site_name" content="Four Plates">
   <meta property="og:locale" content="en_GB">
   <meta property="og:title" content="Four Plates support">
-  <meta property="og:description" content="Help with Four Plates routines from CSV, the Apple Watch app, backup and restore, sharing sessions, editing history and iCloud sync.">
+  <meta property="og:description" content="Help with Four Plates routines from CSV, the Apple Watch app, Apple Health, backup and restore, sharing sessions, editing history and iCloud sync.">
   <meta property="og:url" content="https://fourplates.app/support.html">
   <meta property="og:image" content="https://fourplates.app/social-card.png">
   <meta property="og:image:width" content="1200">
@@ -59,9 +59,11 @@
         <li><a href="#importing">How do I bring my history from another app?</a></li>
         <li><a href="#routines">Can I import routines from a CSV file?</a></li>
         <li><a href="#watch">What can I do with Four Plates on Apple Watch?</a></li>
+        <li><a href="#apple-health">Does Four Plates work with Apple Health?</a></li>
         <li><a href="#backup">How do I back up and restore everything?</a></li>
         <li><a href="#sharing">How do I share one session?</a></li>
         <li><a href="#editing">Can I correct a past session?</a></li>
+        <li><a href="#this-iphone-only">Can I keep my training on this iPhone only?</a></li>
         <li><a href="#sync">What does the iCloud sync status mean?</a></li>
         <li><a href="#restore">How do I restore Four Plates Pro?</a></li>
         <li><a href="#cancel">How do I cancel a subscription?</a></li>
@@ -103,7 +105,7 @@
         <li><code>Sets</code> (required): how many sets, a whole number from 1 to 20.</li>
         <li><code>Reps</code> (required): the reps for each set, a whole number from 1 to 999, or a range such as 8–12. Four Plates uses the first number in a range and says so in the preview.</li>
         <li><code>Weight</code> (optional): a target weight in the unit you chose. Leave it blank to choose the weight on the day.</li>
-        <li><code>Superset</code> (optional): a label such as A. Exercises next to each other in the same routine with the same label become a superset: a set of each in turn, then rest after the round.</li>
+        <li><code>Superset</code> (optional): a label such as A. Exercises next to each other in the same routine with the same label become a superset: a set of each in turn.</li>
       </ul>
       <p>Columns can be in any order, capital letters don’t matter, and other columns are ignored. If a routine with the same name already exists, the new one is called Push 2, for example, so nothing is replaced. If a row can’t be read, it’s skipped and the preview says why.</p>
       <p>Four Plates doesn't check imported plans. You choose every weight.</p>
@@ -113,7 +115,19 @@
       <h2 id="watch">What can I do with Four Plates on Apple Watch?</h2>
       <p>The Watch app comes with Four Plates Pro. It follows the session on your iPhone, showing the next set and a rest ring.</p>
       <p>Tap the weight or reps, then turn the Digital Crown to change that number. Use Log Set to log the set. During rest, use +30s to add time or Skip to end the rest. With no session running, the app offers Start Session.</p>
+      <p>To open Four Plates with one tap, add it to your watch face: the Four Plates launcher shows the mark, and Your Week shows this week’s sessions towards your goal.</p>
       <p><a href="how-it-works.html#apple-watch">How the Watch follows your session</a>.</p>
+    </section>
+
+    <section aria-labelledby="apple-health">
+      <h2 id="apple-health">Does Four Plates work with Apple Health?</h2>
+      <p>Yes, if you’d like it to. It’s off until you choose otherwise, when you set up Four Plates or later in Settings › Apple Health › Save Sessions With.</p>
+      <ul>
+        <li><strong>Off</strong> — nothing is saved to Apple Health.</li>
+        <li><strong>Four Plates</strong> — each session is saved once, as a strength training workout. If your Apple Watch follows the session, it records it with your heart rate and keeps Four Plates on screen.</li>
+        <li><strong>Workout App</strong> — for when only the Workout app’s workouts count for you. Start a Traditional Strength Training workout there: it saves the session, and Four Plates saves nothing. Four Plates on your Watch shows its heart rate, but the Workout app stays on screen; double-press the Digital Crown to switch.</li>
+      </ul>
+      <p>Saving sessions from your iPhone is free; recording them on the Watch comes with the Watch app, in Four Plates Pro. The <a href="privacy.html#apple-health">privacy policy</a> sets out what Four Plates saves to Apple Health and what it reads.</p>
     </section>
 
     <section aria-labelledby="backup">
@@ -125,13 +139,20 @@
 
     <section aria-labelledby="sharing">
       <h2 id="sharing">How do I share one session?</h2>
-      <p>After finishing a session, choose Share Session. For an older session, open it in History and open Options. Choose Share as Text or Share as CSV File, then choose where to copy, save or share it.</p>
-      <p>Sharing a session is free. Notes are never included in either format.</p>
+      <p>After finishing a session, choose Share Session. For an older session, open it in History and open Options. Choose Share as Image, Share as Text or Share as CSV File, then choose where to copy, save or share it.</p>
+      <p>Share as Image makes a picture of the session: its muscle split, duration, volume, sets and any new records. Choose Solid, or Sticker to lay it over a photo, and Show or Hide the weights.</p>
+      <p>Sharing a session is free. Notes are never included.</p>
     </section>
 
     <section aria-labelledby="editing">
       <h2 id="editing">Can I correct a past session?</h2>
       <p>Yes. Open History, choose the session, then open Options › Edit Session. You can rename it, correct sets, and add or remove sets. Editing your history is free.</p>
+    </section>
+
+    <section aria-labelledby="this-iphone-only">
+      <h2 id="this-iphone-only">Can I keep my training on this iPhone only?</h2>
+      <p>Yes. When you set up Four Plates, choose where your training lives: iCloud or This iPhone Only. To change it later, open Settings › Keep training in. The change takes effect the next time Four Plates opens; to switch straight away, close Four Plates from the App Switcher and open it again.</p>
+      <p>With This iPhone Only, nothing leaves this iPhone, and anything already in your iCloud stays there. If you delete Four Plates, your history goes with it, unless you’ve exported it or <a href="#backup">backed it up</a>.</p>
     </section>
 
     <section aria-labelledby="sync">
@@ -140,9 +161,12 @@
       <ul>
         <li><strong>Last synced …</strong> — when Four Plates last saw a sync finish successfully.</li>
         <li><strong>Syncing…</strong> — a sync is running.</li>
-        <li><strong>Waiting for a connection</strong> — Four Plates is waiting for a connection before it can sync.</li>
-        <li><strong>iCloud storage is full</strong> — sync can continue once there’s room in iCloud.</li>
+        <li><strong>Waiting for a connection</strong> — your training is safe on this iPhone and will sync when you’re back online.</li>
+        <li><strong>iCloud storage is full</strong> — your training is safe on this iPhone and will sync once there’s room in iCloud.</li>
+        <li><strong>Couldn’t sync just now</strong> — Four Plates will try again on its own.</li>
         <li><strong>Sign in to iCloud to sync</strong> — you need to sign in to iCloud to use sync.</li>
+        <li><strong>Off</strong> — your training is kept on this iPhone only.</li>
+        <li><strong>Starts when Four Plates reopens</strong> or <strong>Stops when Four Plates reopens</strong> — you’ve changed where your training lives. Close Four Plates from the App Switcher and open it again to switch now.</li>
       </ul>
       <p>Read the <a href="privacy.html">privacy policy</a> for how your training is stored on your device and in iCloud.</p>
       <p><a href="how-it-works.html#icloud-sync">How Four Plates describes sync</a> and <a href="how-it-works.html#your-data">where your data is stored</a>.</p>
