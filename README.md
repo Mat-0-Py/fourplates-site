@@ -25,6 +25,11 @@ Also `routine-template.csv` and `history-example.csv` (both linked from Support)
 by `swift tools/render-images.swift` from the mark's proportions; run it again if the mark
 changes, then commit the PNGs. Nothing runs when the site is published.
 
+`screens/` holds the product page's app screenshots as WebP, light and dark, taken from sample
+data by the app's own scripts (FitnessApp `docs/app-store.md` § iPhone screenshots). After a new
+capture there, run `tools/update-screens.sh` (it needs `cwebp`, from Homebrew's `webp`) and
+commit the images.
+
 `history-example.csv` is a made-up two-session history in the layout the app imports. Nothing
 tests it automatically: if the app's import rules change, import it into the app again to check.
 

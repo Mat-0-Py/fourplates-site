@@ -28,7 +28,10 @@ repeats it; it never leads.
   `docs/product.md`: never a struck-through "was" price or invented urgency.
 - **No other brand names.** Never name or compare with other apps or companies. Apple's platform
   names (iPhone, Apple Watch, iCloud, App Store, Siri) are the only exception. No Apple artwork or
-  SF Symbols, except Apple's official App Store badge, unmodified, once the app is live.
+  SF Symbols, except Apple's official App Store badge, unmodified, once the app is live, and
+  screenshots of Four Plates itself in `screens/`, which show the app's own controls and the
+  iPhone's status bar as the app does (Mat, 14 Nov 2026). Refresh them with
+  `tools/update-screens.sh`; never draw over them or add other apps' screens.
 - **Colour is data, chrome is ink.** Muscle-group colours only ever mean a muscle group; links,
   buttons and text are ink. Yellow is never text.
 - **UK English**, plain and warm, no hype.
