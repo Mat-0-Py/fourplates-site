@@ -14,7 +14,7 @@ removed once this site is live.
 | --- | --- |
 | Product page | <https://fourplates.app/> |
 | How it works | <https://fourplates.app/how-it-works.html> |
-| Privacy policy | <https://fourplates.app/privacy.html> |
+| Privacy policy | <https://fourplates.app/privacy> |
 | Terms of use | <https://fourplates.app/terms.html> |
 | Support | <https://fourplates.app/support.html> |
 
@@ -87,5 +87,5 @@ address.
 ## App Store URLs
 
 Once the site is live: support `https://fourplates.app/support.html`, marketing
-`https://fourplates.app/`, privacy policy `https://fourplates.app/privacy.html`, and terms
+`https://fourplates.app/`, privacy policy `https://fourplates.app/privacy`, and terms
 `https://fourplates.app/terms.html`.
