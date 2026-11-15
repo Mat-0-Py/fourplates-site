@@ -13,10 +13,10 @@ removed once this site is live.
 | Page | Address |
 | --- | --- |
 | Product page | <https://fourplates.app/> |
-| How it works | <https://fourplates.app/how-it-works.html> |
+| How it works | <https://fourplates.app/how-it-works> |
 | Privacy policy | <https://fourplates.app/privacy> |
-| Terms of use | <https://fourplates.app/terms.html> |
-| Support | <https://fourplates.app/support.html> |
+| Terms of use | <https://fourplates.app/terms> |
+| Support | <https://fourplates.app/support> |
 
 Also `routine-template.csv` and `history-example.csv` (both linked from Support), `404.html`,
 `favicon.svg`, `robots.txt`, `sitemap.xml` and `CNAME` (the custom domain for GitHub Pages).
@@ -41,6 +41,10 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Then open <http://127.0.0.1:8000/>. Preview `404.html` directly: the Python server shows its own
 error page for missing addresses.
+
+Pages link to each other without `.html` (`/privacy`, `/terms`), the addresses the App Store
+listing gives. GitHub Pages serves those; the Python server doesn't, so add `.html` in the address
+bar when following a link locally.
 
 The contact address on Privacy, Terms and Support is hello@fourplates.app, an iCloud Mail
 address.
@@ -86,6 +90,6 @@ address.
 
 ## App Store URLs
 
-Once the site is live: support `https://fourplates.app/support.html`, marketing
+Once the site is live: support `https://fourplates.app/support`, marketing
 `https://fourplates.app/`, privacy policy `https://fourplates.app/privacy`, and terms
-`https://fourplates.app/terms.html`.
+`https://fourplates.app/terms`.
