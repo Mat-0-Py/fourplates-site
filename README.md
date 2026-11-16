@@ -17,6 +17,7 @@ removed once this site is live.
 | Privacy policy | <https://fourplates.app/privacy> |
 | Terms of use | <https://fourplates.app/terms> |
 | Support | <https://fourplates.app/support> |
+| What’s new | <https://fourplates.app/whats-new> |
 
 Also `routine-template.csv` and `history-example.csv` (both linked from Support), `404.html`,
 `favicon.svg`, `robots.txt`, `sitemap.xml` and `CNAME` (the custom domain for GitHub Pages).
