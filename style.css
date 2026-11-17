@@ -62,7 +62,7 @@ h3 { font-size: 1.15rem; letter-spacing: -0.02em; }
 .lede { font-size: 1.125rem; line-height: 1.65; color: var(--inkSecondary); }
 .hero-copy .lede { max-width: 440px; }
 .small { margin-top: 0.7rem; color: var(--inkSecondary); font-size: 0.8rem; }
-.store-badge-placeholder { display: inline-flex; flex-direction: column; padding: 10px 24px 12px; margin-top: 1.25rem; color: var(--canvas); background: var(--ink); border-radius: 12px; line-height: 1.1; }
+.store-badge-placeholder { text-decoration: none;  display: inline-flex; flex-direction: column; padding: 10px 24px 12px; margin-top: 1.25rem; color: var(--canvas); background: var(--ink); border-radius: 12px; line-height: 1.1; }
 .store-badge-placeholder span { font-size: 0.75rem; margin-bottom: 3px; }
 .store-badge-placeholder strong { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.03em; }
 .week-preview { margin: 0; padding: 32px; background: var(--card); border-radius: 28px; }

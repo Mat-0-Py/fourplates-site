@@ -52,8 +52,8 @@ address.
 
 ## Still to fill before launch
 
-- `APP_STORE_LINK`: on the product page, replace the "Coming to the App Store" placeholder with
-  Apple's official badge, unmodified, linked to the listing.
+- The home page links to the listing (id6832326538) with a plain ink button. Swap it for Apple's
+  official badge, unmodified, if wanted. Every page has the Smart App Banner and a footer link.
 
 ## Publish
 
